@@ -92,8 +92,7 @@ class RemotePowerControl(PowerControlCommon):
     def handle_custom_relay_request(self, req):
         request_string = 'http://' + str(req.ip_address) + '/' + req.command_string
         response = self.requests_retry_session().get(request_string)
-        response_content = response.content.replace("<html><body>", '').replace("</body></html>\r\n\r\n", '')
-        return CustomRelayCommandResponse(response_content)
+        return CustomRelayCommandResponse(str(response.json()))
 
 
 if __name__ == "__main__":

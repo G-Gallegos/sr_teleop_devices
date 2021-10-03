@@ -1,5 +1,2 @@
- -  name: conveyor_1_relay
-    power_ip: 192.168.0.50
-
- -  name: conveyor_2_relay
-    power_ip: 192.168.0.51
+-  name: conveyor_relay
+   power_ip: 192.168.1.2
